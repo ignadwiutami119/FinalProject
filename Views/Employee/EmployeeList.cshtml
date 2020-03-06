@@ -343,18 +343,20 @@
 <div class="col-lg-12 col-sm-5">
 <nav aria-label="...">
   <ul class="pagination marginleft">
+    @{
+      var paging = ViewBag.page;
     <li class="page-item">
       <a class="page-link" href="/Home/Paging?prev=1">Previous</a>
     </li>
-    <li class="page-item"><a class="page-link" value="1" id="btn1" href="/Employee/EmployeeList?_crntpage=1">1</a></li>
-    <li class="page-item"><a class="page-link" value="2" id="btn2" href="/Employee/EmployeeList?_crntpage=2">2</a></li>
-    <li class="page-item"><a class="page-link" value="3" id="btn3" href="/Employee/EmployeeList?_crntpage=3">3</a></li>
-    <li class="page-item"><a class="page-link" value="4" id="btn4" href="/Employee/EmployeeList?_crntpage=4">4</a></li>
-    <li class="page-item"><a class="page-link" value="5" id="btn5" href="/Employee/EmployeeList?_crntpage=5">5</a></li>
-    <li class="page-item"><a class="page-link" value="6" id="btn6" href="/Employee/EmployeeList?_crntpage=6">6</a></li>
+    <li class="page-item"><a class="page-link" value="1" id="btn1" href="/Employee/EmployeeList?_crntpage=1&status_employee=@paging.StatusPage">1</a></li>
+    <li class="page-item"><a class="page-link" value="2" id="btn2" href="/Employee/EmployeeList?_crntpage=2&status_employee=@paging.StatusPage">2</a></li>
+    <li class="page-item"><a class="page-link" value="3" id="btn3" href="/Employee/EmployeeList?_crntpage=3&status_employee=@paging.StatusPage">3</a></li>
+    <li class="page-item"><a class="page-link" value="4" id="btn4" href="/Employee/EmployeeList?_crntpage=4&status_employee=@paging.StatusPage">4</a></li>
+    <li class="page-item"><a class="page-link" value="5" id="btn5" href="/Employee/EmployeeList?_crntpage=5&status_employee=@paging.StatusPage">5</a></li>
+    <li class="page-item"><a class="page-link" value="6" id="btn6" href="/Employee/EmployeeList?_crntpage=6&status_employee=@paging.StatusPage">6</a></li>
     <li class="page-item">
       <a class="page-link" href="/Home/Paging?next=1">Next</a>
-    </li>
+    </li> }
   </ul>
 <br><br><br></div></div>
 

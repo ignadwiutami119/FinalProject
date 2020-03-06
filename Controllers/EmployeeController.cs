@@ -20,10 +20,10 @@ namespace HC_WEB_FINALPROJECT.Controllers
             _logger = logger;
         }
 
-        public IActionResult EmployeeList(int _crntpage=1)
+        public IActionResult EmployeeList(int _crntpage=1, string status_employee="permanent")
         {
             var set_page = _AppDbContext.Pagings.Find(1);
-            // set_page.StatusPage = status_employee;
+            set_page.StatusPage = status_employee;
             set_page.CurentPage = _crntpage;
             _AppDbContext.SaveChanges();
             if (set_page.CurentPage == 1) {
@@ -31,11 +31,13 @@ namespace HC_WEB_FINALPROJECT.Controllers
                 var spesific_employee = from a in _AppDbContext.Employee where a.Status == set_page.StatusPage select a;
                 var get = from a in spesific_employee.Take (take) where a.Status == set_page.StatusPage select a;
                 ViewBag.items = get;
+                ViewBag.page = set_page;
             } else {
                 var take = set_page.ShowItem;
                 var spesific_employee = from a in _AppDbContext.Employee where a.Status == set_page.StatusPage select a;
                 var get = from a in spesific_employee.Skip (take * (set_page.CurentPage - 1)).Take (take) select a;
                 ViewBag.items = get;
+                ViewBag.page = set_page;
             }
             return View("EmployeeList");
         }
