@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "G:\\HC_WEB_FINALPROJECT\\HC_WEB_FINALPROJECT.csproj": {}
+    "D:\\TRAININGC#\\MARET\\FinalProject\\FinalProject\\HC_WEB_FINALPROJECT.csproj": {}
   },
   "projects": {
-    "G:\\HC_WEB_FINALPROJECT\\HC_WEB_FINALPROJECT.csproj": {
+    "D:\\TRAININGC#\\MARET\\FinalProject\\FinalProject\\HC_WEB_FINALPROJECT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\HC_WEB_FINALPROJECT\\HC_WEB_FINALPROJECT.csproj",
+        "projectUniqueName": "D:\\TRAININGC#\\MARET\\FinalProject\\FinalProject\\HC_WEB_FINALPROJECT.csproj",
         "projectName": "HC_WEB_FINALPROJECT",
-        "projectPath": "G:\\HC_WEB_FINALPROJECT\\HC_WEB_FINALPROJECT.csproj",
-        "packagesPath": "C:\\Users\\Igna Dwi Utami\\.nuget\\packages\\",
-        "outputPath": "G:\\HC_WEB_FINALPROJECT\\obj\\",
+        "projectPath": "D:\\TRAININGC#\\MARET\\FinalProject\\FinalProject\\HC_WEB_FINALPROJECT.csproj",
+        "packagesPath": "D:\\Users\\bsi50132\\.nuget\\packages\\",
+        "outputPath": "D:\\TRAININGC#\\MARET\\FinalProject\\FinalProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Igna Dwi Utami\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "D:\\Users\\bsi50132\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +44,10 @@
             "Microsoft.AspNet.Mvc": {
               "target": "Package",
               "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
@@ -67,6 +76,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [
@@ -79,6 +92,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.0.2, 3.0.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -87,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
