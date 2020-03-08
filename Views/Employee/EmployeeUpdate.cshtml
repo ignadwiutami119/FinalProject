@@ -12,6 +12,21 @@
 .card {
     padding-top: 20px;
     margin: 10px 0 20px 0;
+    background-color:#D4E6F1;
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cardimage {
+    margin: 10px 0 0px 0;
     background-color: rgba(214, 224, 226, 0.2);
     border-top-width: 0;
     border-bottom-width: 2px;
@@ -199,11 +214,11 @@
     padding-top: 0;
     overflow: hidden;
     text-align: center;
-    background-color: rgba(214, 224, 226, 0.2);
+    background-color: #D4E6F1;
 }
 
 .card.hovercard .cardheader {
-    background: #215086;
+    background: #D4E6F1;
     background-size: cover;
     height: 90px;
 }
@@ -233,7 +248,7 @@
     margin-bottom: 4px;
     font-size: 24px;
     line-height: 1;
-    color: #262626;
+    color: #ffffff;
     vertical-align: middle;
 }
 
@@ -258,90 +273,93 @@
           
 <br><br>
 
-<div class="container">
+<div style="background:#D4E6F1" class="container">
 	<div class="row">
-		<div class="col-lg-4 col-sm-6">
-
-            <div class="card hovercard">
-                @* <div class="cardheader">
-                  <h2 style="color:#DDEAF9"><b>@Employee.Name</b></h2>
-                </div> *@
-                @* <div class="body"><br>
-                    <img src=@Employee.Image>
-                </div> *@
+		<div class="col-lg-3 col-sm-6">
+            <div class="cardimage">
+                <div class="body"><br>
+                    <img class="img avatar" style="width:100%" src="@Employee.Image">
+                </div> 
                 <div class="bottom">
-
-
+                     <h3 class="text-center" style="color:#FF4842 "><b>@Employee.Name</b></h3>
+                     <p class="text-center" style="color:#FF4842">@Employee.Occupation</p><br>
                 </div>
             </div>
         </div>
-	</div>
-
-
+	
+<div class="col-lg-9 col-sm-6">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<div class="row justify-content-center">
-		<div class="col-18 col-md-9 col-lg-6 pb-5">
+		<div class="col-18 col-md-9 col-lg-12 pb-5">
                     <!--Form with header-->
                     <form>
                         <div class="card border-primary rounded-0">
                             <div class="card-header p-0">
-                                <div class="bg-info text-white text-center py-2">
-                                    <h3><i></i>Personal Data</h3>
-                                    <p class="m-0">Update Form</p>
+                                <div style="background:#1A5276 ; padding-bottom:18px; padding-top:15px" class="text-center py-2"><p></p>
+                                    <h3 style="color:#F5FBFF  "><b>Personal Data</b></h3>
+                                    @* <p style="color:#D6EAF8" class="m-0">@Employee.Name</p> *@
                                 </div>
                             </div>
                             <div class="card-body p-3">
 
                                 <!--Body-->
                                 <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="name" placeholder="Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="email" placeholder="Email" required>
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="email" placeholder="Email" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="phone" placeholder="Phone" required>
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="phone" placeholder="Phone" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="occupation" placeholder="Occupation" required>
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="occupation" placeholder="Occupation" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="placement" placeholder="Placement" required>
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="status" placeholder="Employee Status" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="address" placeholder="Address" required>
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="placement" placeholder="Placement" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="emergency" placeholder="Emergency Contact" required>
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="address" placeholder="Address" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="text-center">
+                                        <input type="text" style="background:#EBF5FB" class="form-control" id="emergency" placeholder="Emergency Contact" required>
                                     </div>
                                 </div>
 
                                 <div class="text-center">
-                                    <input type="button" onclick="javascript:Update(this)" class="btn btn-success btn-block rounded-0 py-2">
+                                    <input type="button" onclick="javascript:Update(this)" value="Save Change" class="btn btn-success btn-block rounded-0 py-2">
                                 </div>
                             </div>
+                            <br>
 
                         </div>
                     </form>
                     <!--Form with header-->
 
 
-                </div>
+            </div>
 	</div>
 </div>
+
+</div></div>
 <br><br><br>
 
   <script type="text/javascript">
@@ -355,6 +373,7 @@ function Update(btn)
     var occupation = document.getElementById("occupation").value;
     var placement = document.getElementById("placement").value;
     var emergency = document.getElementById("emergency").value;
+    var status = document.getElementById("status").value;
     console.log(Id);
     console.log(email);
     console.log(address);
@@ -362,6 +381,6 @@ function Update(btn)
     console.log(placement);
     console.log(emergency);
     console.log(name);
-    location.href='/Employee/EmployeeUpdateData?Id='+Id+'&name='+name+'&email='+email+'&phone='+phone+'&address='+address+'&occupation='+occupation+'&placement='+placement+'&emergency='+emergency;
+    location.href='/Employee/EmployeeUpdateData?Id='+Id+'&name='+name+'&email='+email+'&phone='+phone+'&address='+address+'&occupation='+occupation+'&placement='+placement+'&emergency='+emergency+'&status='+status;
 }
 </script>

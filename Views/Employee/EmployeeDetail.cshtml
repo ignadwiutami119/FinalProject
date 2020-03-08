@@ -198,11 +198,11 @@
     padding-top: 0;
     overflow: hidden;
     text-align: center;
-    background-color: rgba(214, 224, 226, 0.2);
+    background-color: #D4E6F1;
 }
 
 .card.hovercard .cardheader {
-    background: #215086;
+    background: #1F618D;
     background-size: cover;
     height: 90px;
 }
@@ -263,23 +263,23 @@
    <div class="column">
     <div class="column text-right"> <div class="col-lg-12 col-sm-5">
 @* <button class="btn btn-success"  id="Employee.id" data-name="@Employee.Name" data-email="@Employee.Email" data-phone="@Employee.Phone" data-occupation="@Employee.Occupation" data-placement="@Employee.Placement" data-address="@Employee.Address" data-emergency="@Employee.EmergencyContact" data-toggle="modal" data-target="#exampleModal"><b>Update</b></button> *@
-<button class="btn btn-success" onclick="javascript:Update(this)"><b>Update</b></button>
-<button class="btn btn-danger"><b>Remove</b></button>
+<button class="btn btn-success" onclick="javascript:Update(this)"><b>Edit Data</b></button>
+<button class="btn btn-danger" onclick="javascript:Remove(this)"><b>Remove</b></button>
 </div></div> </div>
 	<div class="row">
 		<div class="col-lg-12 col-sm-6">
 
             <div class="card hovercard">
-                <div class="cardheader">
-                  <h2 style="color:#DDEAF9"><b>@Employee.Name</b></h2>
+                <div class="cardheader" style="margin-top: 15px;">
+                    <div style="padding-top:2px; padding-bottom:5px">
+                  <h2 style="color:#EBF5FB"><b>@Employee.Name</b></h2></div>
                 </div>
                 <div class="avatar"><br>
-                    <img alt="" src=@Employee.Image>
+                    <img alt="profil-picture" src=@Employee.Image>
                 </div>
                 <div class="info">
-                    <div class="title" style="color:#0A3362">
-                        @Employee.Occupation
-                        Placement : @Employee.Placement
+                    <div style="color:#FF4842">
+                        <b>@Employee.Occupation</b>
                     </div>
                     <div class="desc">@Employee.Email</div>
                     <div class="desc">@Employee.Phone</div>
@@ -336,6 +336,12 @@ function Update()
 {
     var Id = document.getElementById("ID").value;
     location.href='/Employee/EmployeeUpdate?Id='+Id;
+}
+
+function Remove()
+{
+    var Id = document.getElementById("ID").value;
+    location.href='/Employee/EmployeeRemove?Id='+Id;
 }
 </script>
 

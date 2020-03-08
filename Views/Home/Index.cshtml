@@ -9,7 +9,7 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: #154360;
 }
 
 body {
@@ -89,20 +89,22 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #2471A3;
   border: none;
   color: white;
-  padding: 15px 80px;
+  margin: 5px;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
+  width: 102%;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
-  margin: 5px 20px 40px 20px;
+ 
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -111,7 +113,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: #2E86C1 ;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -122,7 +124,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -143,12 +145,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, input[type=password]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input[type=text]:placeholder, input[type=password]:placeholder {
   color: #cccccc;
 }
 
@@ -250,29 +252,28 @@ input[type=text]:placeholder {
     <!-- Tabs Titles -->
 
     <!-- Icon -->
-    @* <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-    </div> *@
+    <div>
+      <img style="width: 50%;" src="https://i.pinimg.com/originals/94/33/d7/9433d7a292c7a2b212994803c14c269f.jpg" id="icon" alt="User Icon" />
+    </div>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h1 class="text-center login-title">Sign in to continue to Bootsnipp</h1>
-            <div class="account-wall">
+        <div class="col-sm-6 col-md-3 col-md-offset-4">
+            <div class="account-wall" style="margin-left:15px; margin-right:27px">
                 <form class="form-signin">
                 <input type="text" id="email" class="form-control" placeholder="Email" required autofocus>
-                <input type="password" id="password" class="form-control" placeholder="Password" required>
-                <button onclick="javascript:Login(this)" class="btn btn-lg btn-primary btn-block" type="button">
-                    Sign in</button>
-                <label class="checkbox pull-left">
-                    <input type="checkbox" value="remember-me">
-                    Remember me
-                </label>
-                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                <input type="password" id="password" class="form-control" placeholder="Password" required autofocus>
+                <input onclick="javascript:Login(this)" value="Sign in" class="btn btn-lg btn-block" type="button">
+                    
+                <label class="checkbox pull-left"><br>
+                    @* <input type="checkbox" value="remember-me">
+                    Remember me  
+                </label><br> *@
+                <a href="#" style="color:#2980B9" class="text-center need-help">Forgot Password?</a><span class="clearfix"></span>
                 </form>
-            </div>
-            <a href="#" class="text-center new-account">Create an account </a>
-        </div>
+            </div><br>
+            @* <a href="#" class="text-center new-account">Create an account </a><br> *@
+        </div><br>
     </div>
 </div>
 </body>

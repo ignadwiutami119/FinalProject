@@ -207,10 +207,8 @@ G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\HC_WEB_FINALPROJECT.
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\HC_WEB_FINALPROJECT.TagHelpers.input.cache
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\HC_WEB_FINALPROJECT.TagHelpers.output.cache
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\HC_WEB_FINALPROJECT.RazorCoreGenerate.cache
-G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\Razor\Views\Employee\EmployeeContract.cshtml.g.cs
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\Razor\Views\Employee\EmployeeDetail.cshtml.g.cs
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\Razor\Views\Employee\EmployeeList.cshtml.g.cs
-G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\Razor\Views\Employee\EmployeeProbation.cshtml.g.cs
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\Razor\Views\Employee\EmployeeUpdate.cshtml.g.cs
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\Razor\Views\Home\Dashboard.cshtml.g.cs
 G:\HC_WEB_FINALPROJECT\FinalProject\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs

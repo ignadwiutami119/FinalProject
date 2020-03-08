@@ -42,7 +42,24 @@ namespace HC_WEB_FINALPROJECT.Controllers
             return View("EmployeeList");
         }
 
+        public IActionResult Search(string keyword)
+        {
+            System.Console.WriteLine(keyword);
+            System.Console.WriteLine("ini keyword");
+            var get = from a in _AppDbContext.Employee where a.Name.Contains(keyword) || a.Address.Contains(keyword) || a.Email.Contains(keyword) || a.Occupation.Contains(keyword) || a.Placement.Contains(keyword) select a;
+            ViewBag.items = get;
+            var set_page = _AppDbContext.Pagings.Find(1);
+            ViewBag.page = set_page;
+            return View("EmployeeList");
+        }
 
+        public IActionResult EmployeeRemove(int Id)
+        {
+            var rmv = _AppDbContext.Employee.Find(Id);
+            _AppDbContext.Remove(rmv);
+            _AppDbContext.SaveChanges();
+            return RedirectToAction("EmployeeList","Employee");
+        }
 
         public IActionResult EmployeeDetail(int Id)
         {
@@ -57,7 +74,7 @@ namespace HC_WEB_FINALPROJECT.Controllers
             return View("EmployeeUpdate");
         }
 
-        public IActionResult EmployeeUpdateData(int Id, string name, string email, string address, string phone, string occupation, string placement, string emergency)
+        public IActionResult EmployeeUpdateData(int Id, string name, string email, string address, string phone, string occupation, string placement, string emergency, string status)
         {
             var get = _AppDbContext.Employee.Find(Id);
             get.Name = name;
@@ -67,6 +84,7 @@ namespace HC_WEB_FINALPROJECT.Controllers
             get.Occupation = occupation;
             get.Placement = placement;
             get.EmergencyContact = emergency;
+            get.Status = status;
             _AppDbContext.SaveChanges();
             ViewBag.items = get;
             return View("EmployeeDetail");
