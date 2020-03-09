@@ -195,7 +195,7 @@
     padding-left: 15px;
     overflow: hidden;
     text-align: center;
-    background-color: #D4E6F1;
+    background-color: #D6EAF8;
 }
 
 .btn:focus{
@@ -214,7 +214,7 @@ background: #ffffff;
 
 .card.hovercard .body {
     background-size: cover;
-    height: 300px;
+    height: 290px;
 }
 
 .card.hovercard .avatar {
@@ -271,11 +271,19 @@ background: #ffffff;
     <div class="column">
         <div class="col-lg-12 col-sm-5">
         <h3><b>Employee List</b></h3></div>
-    <div class="column text-right"> <div class="col-lg-12 col-sm-5">
-<button class="btn btn-success"><b>Export CSV</b></button>
-<button class="btn btn-success"><b>Export CSV (All)</b></button>
+    <div class="col-lg-12 col-sm-5"><div class="column text-right"> 
+<button onclick="location.href='/Employee/ExportCSV'" class="btn btn-success"><b>Export CSV</b></button>
+<button onclick="location.href='/Employee/ExportAll'" class="btn btn-success"><b>Export CSV (All)</b></button>
+<form method="post" enctype="multipart/form-data" asp-action="Import" asp-controller="Employee">
+        <div>
+            <input class="form-control" name="file" type="file" value="file" required />
+            <button class="btn btn-success" type="submit" onclick="location.href='/Employee/Import'"><b>Import</b></button>
+        </div>
+</form> 
 <button class="btn btn-success"><b>Import CSV</b></button>
-<button class="btn btn-success"><b>Add New Employee</b></button> </div></div> </div>
+<button onclick="location.href='/Employee/AddEmployee'" class="btn btn-success"><b>Add New Employee</b></button> </div></div> </div>
+
+
         <div class="col-lg-12 col-sm-5">
              <div class="card hovercard">
                     <div class="row" style="background-color: #1F618D;">
@@ -306,7 +314,7 @@ background: #ffffff;
                    <div class="col-lg-11 col-sm-5">
                     <input type="text" id="keyword" name="search" class="form-control" placeholder="Type to search"></div>
                    <div>
-                    <button onclick="javascript:click(this)" style="font-family:Arial, Helvetica, sans-serif" class="btn btn-warning" type="button"><span class="fa fa-search"> search</span>
+                    <button onclick="javascript:Search(this)" class="btn btn-warning" type="button"><span class="fa fa-search"> search</span>
                     </button></div></form>
                     </div><br>    
                 <div class="body">
@@ -322,7 +330,7 @@ background: #ffffff;
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Occupation</th>
-      <th scope="col">Placement</th>
+      <th scope="col">Department</th>
       <th scope="col"></th>
     </tr>
   </thead>    
@@ -355,7 +363,7 @@ background: #ffffff;
 <div class="column">
 <div class="col-lg-12 col-sm-5">
 <nav aria-label="...">
-  <ul class="pagination marginleft">
+  <ul style="margin-left:12px" class="pagination marginleft">
     @{
       var paging = ViewBag.page;
     <li class="page-item">
@@ -384,9 +392,11 @@ function EmployeeDetail(btn)
     location.href='/Employee/EmployeeDetail?Id='+Id;
 }
 
-function click()
+function Search()
 {
-    var keyword = document.getElemsentById("keyword").value;
+    var keyword = document.getElementById("keyword").value;
+    console.log(keyword);
     location.href='/Employee/Search?keyword='+keyword;
 }
+
 </script>

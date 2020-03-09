@@ -40,6 +40,99 @@ namespace HC_WEB_FINALPROJECT.Migrations
                     b.ToTable("Account");
                 });
 
+            modelBuilder.Entity("HC_WEB_FINALPROJECT.Models.Applicant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("BirthPlace")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmergencyContact")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Occupation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Placement")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status_Proccess")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Applicant");
+                });
+
+            modelBuilder.Entity("HC_WEB_FINALPROJECT.Models.ApplicantPaging", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CurentPage")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Search")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ShowItem")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StatusPage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ApplicantPagings");
+                });
+
+            modelBuilder.Entity("HC_WEB_FINALPROJECT.Models.Attendance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("ClockIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ClockOut")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmployeeId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Attendances");
+                });
+
             modelBuilder.Entity("HC_WEB_FINALPROJECT.Models.Employee", b =>
                 {
                     b.Property<int>("Id")
@@ -97,6 +190,9 @@ namespace HC_WEB_FINALPROJECT.Migrations
 
                     b.Property<int>("CurentPage")
                         .HasColumnType("int");
+
+                    b.Property<string>("Search")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ShowItem")
                         .HasColumnType("int");
